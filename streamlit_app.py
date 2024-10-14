@@ -55,8 +55,9 @@ def check_answer(selected, categories):
 
 # Main birthday card display
 def main():
-    st.title("🎉 Happy Birthday, [Your Friend's Name]! 🎉")
-    st.write("I made this special card just for you. Hope you enjoy the game too!")
+    st.title("🎉 Happy 22nd Eva!!!🤠 ")
+    st.write("You're pretty great. You're always making me laugh. I hope you have a fun day")
+    st.write("Told ya I'd code something for my favorite google intern")
 
     # Button to start the game
     if st.button("Start the Connections Game"):
