@@ -1,8 +1,9 @@
 import streamlit as st
 
 def main():
-    st.title("🎉 Happy Birthday, [Your Friend's Name]! 🎉")
-    st.write("I made this special card just for you. Hope you enjoy the game too!")
+    st.title("🎉 Happy 22nd Eva! 🤠")
+    st.write("You're pretty great. You're always making me laugh. Hope you have a sweet day")
+    st.write("Told ya I'd code something to celebrate my favorite google intern (hopefully employee soon)")
 
     # Embed the personalized connections game
     st.subheader("Check out your Personalized Connections Game!")
