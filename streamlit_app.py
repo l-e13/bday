@@ -38,14 +38,20 @@ def connections_game():
         else:
             color = "lightblue"
         
-        # Create a button for each word
+        # Create a button for each word using markdown
         with cols[i % 4]:
-            if st.button(word, key=word, help=f"Click to select {word}", style=f"background-color: {color};"):
+            if st.button(word, key=word):
                 if word in st.session_state.selected_words:
                     st.session_state.selected_words.remove(word)
                 else:
                     if len(st.session_state.selected_words) < 4:
                         st.session_state.selected_words.append(word)
+        
+        # Use st.markdown to display the button with color (you can customize the styling as needed)
+        st.markdown(
+            f'<button style="background-color: {color}; color: black; border: none; border-radius: 5px; padding: 10px; cursor: pointer; width: 100%;">{word}</button>',
+            unsafe_allow_html=True
+        )
 
     st.write("Selected Words:", st.session_state.selected_words)
     
@@ -70,9 +76,8 @@ def check_answer(selected, categories):
 
 # Main birthday card display
 def main():
-    st.title("🎉 Happy 22nd Eva! 🤠")
-    st.write("You're pretty great. You're always making me laugh. I hope you have a fun day")
-    st.write("Told ya I'd code something to celebrate my favorite google intern")
+    st.title("🎉 Happy Birthday, [Your Friend's Name]! 🎉")
+    st.write("I made this special card just for you. Hope you enjoy the game too!")
 
     # Button to start the game
     if st.button("Start the Connections Game"):
@@ -80,4 +85,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
